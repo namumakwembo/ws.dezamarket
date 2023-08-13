@@ -22,7 +22,7 @@ Route::get('/', function () {
 
 Route::get('/broadcast', function () {
     
-    Test::dispatch();
+    event(new Test());
 });
 
 
