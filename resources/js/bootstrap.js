@@ -42,6 +42,6 @@ window.Echo = new Echo({
     cluster: import.meta.env.VITE_PUSHER_APP_CLUSTER ?? 'mt1',
     wsHost: window.location.hostname,
     wsPort: import.meta.env.VITE_PUSHER_PORT,
-    forceTLS: false,
+    forceTLS: (import.meta.env.VITE_PUSHER_SCHEME ?? 'https') === 'https',
     disableStats: false,
 });
