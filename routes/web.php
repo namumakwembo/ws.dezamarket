@@ -1,5 +1,6 @@
 <?php
 
+use App\Events\Test;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,6 +18,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/broadcast', function () {
+    
+    Test::dispatch();
+});
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
