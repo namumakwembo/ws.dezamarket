@@ -56,13 +56,13 @@ return [
             'options' => [
                 'cluster' => env('PUSHER_APP_CLUSTER'),
                 'encrypted' => true,
-                'host' => "https://proxy.ws.dezamarket.com/",
-                'port' => env('PUSHER_PORT', 443), 
-                'scheme' => env('PUSHER_SCHEME', 'https'),
-                // 'curl_options' => [
-                //     CURLOPT_SSL_VERIFYHOST => 0,
-                //     CURLOPT_SSL_VERIFYPEER => 0,
-                // ]
+                'host' => '127.0.0.1',
+                'port' => 6001, 
+                'scheme' => 'http',
+                'curl_options' => [
+                    CURLOPT_SSL_VERIFYHOST => 0,
+                    CURLOPT_SSL_VERIFYPEER => 0,
+                ]
             ],
         ],
 
