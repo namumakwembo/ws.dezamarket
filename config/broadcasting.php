@@ -56,7 +56,7 @@ return [
             'options' => [
                 'cluster' => env('PUSHER_APP_CLUSTER'),
                 'encrypted' => true,
-                'host' => "env('PUSHER_HOST', '127.0.0.1')",
+                'host' => env('PUSHER_HOST', '127.0.0.1'),
                 'port' => env('PUSHER_PORT', 443), 
                 'scheme' => 'http',
                 // 'curl_options' => [
